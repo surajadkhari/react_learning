@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Nav from './Nav';
+import Slider from './Slider';
+import Footer from './Footer';
+import Image from "./Assets/3.JPG";
+const Element=(
+  <div>
+    <Nav/>
+    <Slider/>
+    <img src={Image} alt="This is us" width="100px" height="100px"></img>
+    <Footer/>
+  </div>
+) 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  Element,document.getElementById('root')
+)
